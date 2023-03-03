@@ -33,11 +33,11 @@ const contagemRegressiva = (tempo) => {
 }
 
 const tempoRestante = () => {
-    // 1 de janeiro de 1970
-    const hoje = Date.now();
+    // Data do meu aniversario
+    const hoje = new Date();
     const ano = hoje.getFullYear();
     const dataEvento = new Date (ano +'-03-11 08:00:00');
-    return Math.floor((dataEvento - hoje - ano) / 1000);
+    return Math.floor((dataEvento - hoje ) / 1000);
 }
 
 contagemRegressiva(tempoRestante());
